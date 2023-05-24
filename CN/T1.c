@@ -59,10 +59,6 @@ int main() {
         }
     }
 
-    for (i = 0; i < ordem; i++) {
-        for (j = 0; j < ordem * 2; j++) {
-        }
-    }
 
     for (i = 0; i < ordem; i++) {
         for (j = ordem; j < ordem * 2; j++) {
