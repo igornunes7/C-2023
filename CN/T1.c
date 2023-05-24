@@ -3,12 +3,12 @@
 #include <stdio.h>
 #include <time.h>
 
-void mostrar_matriz(int ordem, float matriz[][ordem]) {
+void mostrar_matriz(int ordem, double matriz[][ordem]) {
     int i, j;
     printf("\nA matriz digitada foi:\n");
     for (i = 0; i < ordem; i++) {
         for (j = 0; j < ordem; j++) {
-            printf("%.2f ", matriz[i][j]);
+            printf("%.1lf ", matriz[i][j]);
         }
         printf("\n");
     }
@@ -20,7 +20,7 @@ int main() {
     printf("Ordem da matriz: ");
     scanf("%d", &ordem);
 
-    float matriz[ordem][ordem], identidade[ordem][ordem], resultado[ordem][ordem * 2], aux, m, div;
+    double matriz[ordem][ordem], identidade[ordem][ordem], resultado[ordem][ordem * 2], aux, m, div;
     double tempo;
 
     // Pedindo a matriz
@@ -28,7 +28,7 @@ int main() {
     for (i = 0; i < ordem; i++) {
         for (j = 0; j < ordem; j++) {
             printf("Matriz[%d][%d]: ", i + 1, j + 1);
-            scanf("%f", &matriz[i][j]);
+            scanf("%lf", &matriz[i][j]);
         }
     }
 
@@ -37,7 +37,7 @@ int main() {
     printf("\nA matriz digitada foi:\n");
     for (i = 0; i < ordem; i++) {
         for (j = 0; j < ordem; j++) {
-            printf("%0.2f ", matriz[i][j]);
+            printf("%.1lf ", matriz[i][j]);
         }
         printf("\n");
     }
@@ -73,7 +73,7 @@ int main() {
     printf("\nResultante\n");
     for (i = 0; i < ordem; i++) {
         for (j = 0; j < ordem * 2; j++) {
-            printf("%0.2f ", resultado[i][j]);
+            printf("%.1lf ", resultado[i][j]);
         }
         printf("\n");
     }
@@ -98,7 +98,7 @@ int main() {
     printf("\nApos troca\n");
     for (i = 0; i < ordem; i++) {
         for (j = 0; j < ordem * 2; j++) {
-            printf("%0.2f ", resultado[i][j]);
+            printf("%.1lf ", resultado[i][j]);
         }
         printf("\n");
     }
@@ -127,7 +127,7 @@ int main() {
     printf("\nApos operacoes nas linhas\n");
     for (i = 0; i < ordem; i++) {
         for (j = 0; j < ordem * 2; j++) {
-            printf("%0.2f ", resultado[i][j]);
+            printf("%.1lf ", resultado[i][j]);
         }
         printf("\n");
     }
@@ -138,7 +138,7 @@ int main() {
     printf ("\nMatriz Inversa:\n");
     for (i = 0; i < ordem; i++) {
         for (j = 0; j < ordem; j++) {
-            printf("%0.2f ", resultado[i][j + ordem]);
+            printf("%.1lf ", resultado[i][j + ordem]);
         }
         printf("\n");
     }
