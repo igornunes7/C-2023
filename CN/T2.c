@@ -10,7 +10,7 @@ void gaussJacobi(int ordem, double matriz[ordem][ordem], double termo_ind[ordem]
     bool aux = true;
     clock_t inicio, fim;
 
-    double x[ordem], // nova soluções
+    double x[ordem], // nova solução
     x_ant[ordem], // solução anterior
     dif;
 
